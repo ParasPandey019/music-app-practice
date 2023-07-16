@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar">
+        <div id="nav-left">
+            <div id="nav-logo">
+                <img 
+                height="50px"
+                src="data:image/jpeg;base64,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" 
+                class="logo-img">
+                <div>
+                    <h4>Player Name</h4>
+                    <h6>Music Player</h6>
+                </div>
+            </div>
+            <p>Favourites</p>
+        </div>
+        <label class="card-icons" for="burger"><img src="./img/icons/burger.png"></label>
+        
+        <div id="nav-right">
+            <div id="nav-notification">
+                <img class="card-icons" src="./img/icons/notification.png">
+            </div>
+            <div class="searchbar">
+                <img class="card-icons" id="search-icon" src="./img/icons/search.png">
+                <input type="search" id="search" placeholder="search">
+                <img class="card-icons" id="mic-icon" src="./img/icons/microphone.png">
+            </div>
+            <img src="./img/profile_picture.jpg" id="avatar">
+        </div>
+    </div>
+    <div class="main-section">
+        <div class="main-left">
+
+            <!-- banner section -->
+            <div id="banners">
+                <img src="./img/Kesariya.jpg">
+                <img src="./img/mood.jpg">
+                <img src="./img/Suzume.jpg">
+            </div>
+
+            <!-- Latest Section -->
+            <div id="latest" class="containers">
+                <h2>Latest Releases</h2>
+                <div id="latest-section">
+                    <div class="latest-cards">
+                        <div class="latest-card-left">
+                            <img src="./img/latest_english/I'll Wait.jpg">
+                            <img class="latest-card-play" src="./img/icons/play.png">
+                            <div>
+                                <p>I'll Wait</p>
+                                <p>Jan, 2023</p>
+                            </div>
+                        </div>
+                        <div class="latest-card-right">
+                            <label for="toggle1"><img class="card-icons" src="./img/icons/more.png"></label>
+                            <input type="checkbox" id="toggle1" class="toggles">
+                            <p>3:48</p>
+                            <div class="latest-dropdown" id="dropdown-1">
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/play now.png">
+                                    <p>Play Now</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/queue.png">
+                                    <p>Add to Queue</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/music.png">
+                                    <p>Add to Playlist</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/info.png">
+                                    <p>More Info</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-cards">
+                        <div class="latest-card-left">
+                            <img src="./img/latest_english/let me go.jpg">
+                            <img class="latest-card-play" src="./img/icons/play.png">
+                            <div>
+                                <p>Let Me Go</p>
+                                <p>Jan, 2023</p>
+                            </div>
+                        </div>
+                        <div class="latest-card-right">
+                            <label for="toggle2"><img class="card-icons" src="./img/icons/more.png"></label>
+                            <input type="checkbox" id="toggle2" class="toggles">
+                            <p>3:49</p>
+                            <div class="latest-dropdown" id="dropdown-2">
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/play now.png">
+                                    <p>Play Now</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/queue.png">
+                                    <p>Add to Queue</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/music.png">
+                                    <p>Add to Playlist</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/info.png">
+                                    <p>More Info</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-cards">
+                        <div class="latest-card-left">
+                            <img src="./img/latest_english/roar.jpg">
+                            <img class="latest-card-play" src="./img/icons/play.png">
+                            <div>
+                                <p>Roar</p>
+                                <p>Jan, 2023</p>
+                            </div>
+                        </div>
+                        <div class="latest-card-right">
+                            <label for="toggle3"><img class="card-icons" src="./img/icons/more.png"></label>
+                            <input type="checkbox" id="toggle3" class="toggles">
+                            <p>3:56</p>
+                            <div class="latest-dropdown" id="dropdown-3">
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/play now.png">
+                                    <p>Play Now</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/queue.png">
+                                    <p>Add to Queue</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/music.png">
+                                    <p>Add to Playlist</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/info.png">
+                                    <p>More Info</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-cards">
+                        <div class="latest-card-left">
+                            <img src="./img/latest_english/Mood.jpg">
+                            <img class="latest-card-play" src="./img/icons/play.png">
+                            <div>
+                                <p>Mood</p>
+                                <p>Jan, 2023</p>
+                            </div>
+                        </div>
+                        <div class="latest-card-right">
+                            <label for="toggle4"><img class="card-icons" src="./img/icons/more.png"></label>
+                            <input type="checkbox" id="toggle4" class="toggles">
+                            <p>4:03</p>
+                            <div class="latest-dropdown" id="dropdown-4">
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/play now.png">
+                                    <p>Play Now</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/queue.png">
+                                    <p>Add to Queue</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/music.png">
+                                    <p>Add to Playlist</p>
+                                </div>
+                                <div>
+                                    <img class="dropdown-icons" src="./img/icons/info.png">
+                                    <p>More Info</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Section -->
+            <div id="popular" class="containers">
+                <h2>Popular Artists</h2>
+                <div id="popular-images">
+                    <div>
+                        <img src="./img/songs/album/Alan.jpg">
+                        <p>Alan Walker</p>
+                    </div>
+                    <div>
+                        <img src="./img/songs/album/Arjit.jpg">
+                        <p>Arijit Singh</p>
+                    </div>
+                    <div>
+                        <img src="./img/songs/album/Billie Eilish.jpg">
+                        <p>Billie Eilish</p>
+                    </div>
+                    <div>
+                        <img src="./img/songs/album/Yoasobi.png">
+                        <p>Yoasobi</p>
+                    </div>
+                    <div>
+                        <img src="./img/songs/album/Dua.jpg">
+                        <p>Dua Lipa</p>
+                    </div>
+                    <div>
+                        <img src="./img/songs/album/Marshmellow.png">
+                        <p>Marshmellow</p>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+
+
+            <!-- Genre Section -->
+            <div id="genres">
+                <div id="generes-left">
+                    <img src="./img/profile_picture.jpg">
+                </div>
+                <div id="generes-right">
+                    <div>
+                        <img src="./img/music_themes/chill.jpg">
+                        <p>Chill</p>
+                    </div>
+                    <div>
+                        <img src="./img/music_themes/love.jpg">
+                        <p>Love</p>
+                    </div>
+                    <div>
+                        <img src="./img/music_themes/pop.jpg">
+                        <p>Pop</p>
+                    </div>
+                    <div>
+                        <img src="./img/music_themes/retro.jpg">
+                        <p>Retro</p>
+                    </div>
+                    <div>
+                        <img src="./img/music_themes/rock.jpg">
+                        <p>Rock</p>
+                    </div>
+                    <div>
+                        <img src="./img/music_themes/workout.jpg">
+                        <p>Workout</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Mood Section -->
+            <div id="mood">
+                <div>
+                    <img src="./img/themes/electronic.jpg">
+                    <p>Electronic</p>
+                </div>
+                <div>
+                    <img src="./img/themes/party.jpg">
+                    <p>Party</p>
+                </div>
+                <div>
+                    <img src="./img/themes/road.jpg">
+                    <p>Roadtrip</p>
+                </div>
+            </div>
+
+            <!-- Latest English Section -->
+            <div id="latest-eng" class="containers">
+                <h2>Latest English</h2>
+                <div id="latest-eng-cards">
+                    <div class="latest-eng-img">
+                        <img src="./img/latest_english/I'll Wait.jpg">
+                        <p>I'll Wait</p>
+                        <p>Oct 10, 2019</p>
+                    </div>
+                    <div class="latest-eng-img">
+                        <img src="./img/latest_english/ily.jpg">
+                        <p>Ily</p>
+                        <p>Oct 10, 2019</p>
+                    </div>
+                    <div class="latest-eng-img">
+                        <img src="./img/latest_english/let me go.jpg">
+                        <p>Let Me Go</p>
+                        <p>Oct 10, 2019</p>
+                    </div>
+                    <div class="latest-eng-img">
+                        <img src="./img/latest_english/qurantine clean.jpg">
+                        <p>Quarantine Clean</p>
+                        <p>Oct 10, 2019</p>
+                    </div>
+                    <div class="latest-eng-img">
+                        <img src="./img/latest_english/toosie slide.jpg">
+                        <p>Toosie Slide</p>
+                        <p>Oct 10, 2019</p>
+                    </div>
+                    <div class="latest-eng-img">
+                        <img src="./img/latest_english/uptown funk.png">
+                        <p>Uptown Funk</p>
+                        <p>Oct 10, 2019</p>
+                    </div> 
+                    <div class="latest-eng-img">
+                        <img src="./img/latest_english/mood.jpg">
+                        <p>Mood</p>
+                        <p>Oct 10, 2019</p>
+                    </div> 
+                </div>
+            </div>
+
+            <!-- Latest Hindi section -->
+            <div id="latest-hindi" class="containers">
+                <h2>Latest Hindi</h2>
+                <div id="latest-hindi-cards">
+                    <div class="latest-hindi-img">
+                        <img src="./img/latest_hindi/baarish.jpeg">
+                        <p>Baarish</p>
+                        <p>Oct 10, 2019</p>
+                    </div> 
+                    <div class="latest-hindi-img">
+                        <img src="./img/latest_hindi/galiyaan.jpg">
+                        <p>Galiyyanj</p>
+                        <p>Oct 10, 2019</p>
+                    </div> 
+                    <div class="latest-hindi-img">
+                        <img src="./img/latest_hindi/giveme some sunshine.jpg">
+                        <p>Sunshine</p>
+                        <p>Oct 10, 2019</p>
+                    </div> 
+                    <div class="latest-hindi-img">
+                        <img src="./img/latest_hindi/kaun tujhe.jpg">
+                        <p>Kaun Tujhe</p>
+                        <p>Oct 10, 2019</p>
+                    </div> 
+                    <div class="latest-hindi-img">
+                        <img src="./img/latest_hindi/tera ban jaunga.jpg">
+                        <p>Tera Ban Jaunga</p>
+                        <p>Oct 10, 2019</p>
+                    </div> 
+                    <div class="latest-hindi-img">
+                        <img src="./img/latest_hindi/tere sang yara.jpg">
+                        <p>Tere Sang Yara</p>
+                        <p>Oct 10, 2019</p>
+                    </div>
+                    <div class="latest-hindi-img">
+                        <img src="./img/latest_hindi/Kesariya.jpg">
+                        <p>Kesariya</p>
+                        <p>Oct 10, 2019</p>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+        <label for="toggle-playlist" id="toggle-playlist-label">toggle playlist</label>
+        <input type="checkbox" id="toggle-playlist">
+        <div class="main-right">
+            <h2>Playlist</h2>
+            <div class="playlist">
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>01</p>
+                        <img src="./img/playlist/Alone.jpg">
+                        <div>
+                            <p>Alone</p>
+                            <p>Alan Walker</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>02</p>
+                        <img src="./img/playlist/Bekhayali.jpg">
+                        <div>
+                            <p>Bekhayali</p>
+                            <p>Arijit Singh</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>03</p>
+                        <img src="./img/playlist/blue bird.jpg">
+                        <div>
+                            <p>Blue Bird</p>
+                            <p>Ikimono-Gakari</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>04</p>
+                        <img src="./img/playlist/Closer.png">
+                        <div>
+                            <p>Closer</p>
+                            <p>The Chainsmokers</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>05</p>
+                        <img src="./img/playlist/dua.jpg">
+                        <div>
+                            <p>One Kiss</p>
+                            <p>Dua Lipa</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>06</p>
+                        <img src="./img/playlist/Friends.jpg">
+                        <div>
+                            <p>Friends</p>
+                            <p>Marshmellow</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>07</p>
+                        <img src="./img/playlist/girls like you.jpg">
+                        <div>
+                            <p>Girls Like You</p>
+                            <p>Maroon 5</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>08</p>
+                        <img src="./img/playlist/Havana.png">
+                        <div>
+                            <p>Havana</p>
+                            <p>Camila Cabello</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>09</p>
+                        <img src="./img/playlist/Kana boom.jpg">
+                        <div>
+                            <p>Kana Boom</p>
+                            <p>Silhouette</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>10</p>
+                        <img src="./img/playlist/Memories.jpeg">
+                        <div>
+                            <p>Memories</p>
+                            <p>Maroon 5</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>11</p>
+                        <img src="./img/playlist/Renai.jpg">
+                        <div>
+                            <p>Renai</p>
+                            <p>Lizz Robinet</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>12</p>
+                        <img src="./img/playlist/Tukoh Taka.jpg">
+                        <div>
+                            <p>Tukon Taka</p>
+                            <p>Niki Minaj, Maluma ....</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>13</p>
+                        <img src="./img/playlist/Stay.png">
+                        <div>
+                            <p>Stay</p>
+                            <p>Kid Laroi, Justin Beiber</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>14</p>
+                        <img src="./img/playlist/Senorita.png">
+                        <div>
+                            <p>Senorita</p>
+                            <p>Camila Cabello, Shawn Mendes</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>15</p>
+                        <img src="./img/playlist/Stereo Hearts.jpg">
+                        <div>
+                            <p>Stereo Hearts</p>
+                            <p>Adam Levine</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+                <div class="playlist-cards">
+                    <div class="playlist-card-left">
+                        <p>16</p>
+                        <img src="./img/playlist/Swalla.jpg">
+                        <div>
+                            <p>Swalla</p>
+                            <p>Jason Derulo</p>
+                        </div>
+                    </div>
+                    <div class="playlist-card-right">
+                        <img class="card-icons" src="./img/icons/like.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-left">
+            <img src="./img/playlist/Alone.jpg">
+            <div>
+                <p>Alone</p>
+                <p>Alan Walker</p>
+            </div>
+            <div>
+                <img class="footer-icons-left" src="./img/icons/like.png">
+                <img class="footer-icons-left" src="./img/icons/unavailable.png">
+            </div>
+        </div>
+        <div class="footer-mid">
+            <div class="footer-upper">
+                <img class="footer-icons" src="./img/icons/shuffle.png">
+                <img class="footer-icons" src="./img/icons/prev.png">
+                <img class="footer-icons" src="./img/icons/pause.png">
+                <img class="footer-icons" src="./img/icons/next.png">
+                <img class="footer-icons" src="./img/icons/repeat.png">
+            </div>
+            <div class="footer-bottom">
+                <p>0:00</p>
+                <input type="range" id="seek" class="footer-seek">
+                <p>4:08</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <img class="footer-icons-right" src="./img/icons/playlist.png">
+            <img class="footer-icons-right" src="./img/icons/pc.png">
+            <img class="footer-icons-right" src="./img/icons/volume.png">
+            <input type="range" id="vol-seek" class="footer-vol-seek">
+            <img class="footer-icons-right" src="./img/icons/expand.png">
+        </div>
+    </div>
+    
+</body>
+</html>
